@@ -1,0 +1,12 @@
+.card-container {
+    flex: 1 1 23%; /* 4 per row with gaps */
+    max-width: 23%;
+    min-width: 200px;
+    background-color: #129990 !important;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-container:hover{
+    box-shadow: 0px 5px 10px #2a3d33;
+}

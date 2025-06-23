@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "shortKey" : "CA",
+        "name" : "Code Assist",
+        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+    },
+    {
+        "id" : 2,
+        "shortKey" : "WP",
+        "name" : "Writes Poems",
+        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+    },
+    {
+        "id" : 3,
+        "shortKey" : "CS",
+        "name" : "Correct grammer and sentences",
+        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+    },
+    {
+        "id" : 4,
+        "shortKey" : "RAG",
+        "name" : "RAG",
+        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+    },
+    {
+        "id" : 5,
+        "shortKey" : "PG",
+        "name" : "Promt generator",
+        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+    }
+]
