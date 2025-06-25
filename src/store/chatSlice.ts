@@ -1,16 +1,26 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import HomeData from "../mocks/Home.json";
 
-interface chatObject {
+interface ChatMessage {
     role : string,
-    text : string
+    text : string,
+    chatId : string
 }
 interface chatState {
-    chat : chatObject[],
+    chat : {
+        [chatId: string]: ChatMessage[];
+    },
     loading : boolean
 }
 
+const chatIds:any = {};
+
+HomeData.forEach((chat) => {
+    chatIds[chat.shortKey] = [];
+})
+
 const initialState: chatState = {
-    chat : [],
+    chat : chatIds,
     loading : false
 };
 
@@ -18,8 +28,8 @@ const chatSlice = createSlice({
     name : 'chat',
     initialState,
     reducers : {
-        addMessage : (state, action:PayloadAction<chatObject>) => {
-            state.chat.push(action.payload)
+        addMessage : (state, action:PayloadAction<ChatMessage>) => {
+            state.chat[action.payload.chatId].push(action.payload)
         },
         setLoading: (state, action: PayloadAction<boolean>) => {
             state.loading = action.payload;

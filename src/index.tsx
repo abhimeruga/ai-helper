@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
 import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
 
 import Chat from './components/chat/Chat';
 import Home from './components/home/Home';
@@ -13,12 +14,12 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/chat/:chatId" element={<Chat />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </React.StrictMode>
 );

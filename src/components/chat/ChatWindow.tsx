@@ -1,14 +1,15 @@
 import React, {useEffect, useState} from "react";
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store/store';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
+
+import { RootState } from '../../store/store';
 
 
 const ChatWindow = ({chatResponseLoading}: MyComponentProps) => {
 
-      const messages = useSelector((state: RootState) =>
-        state.chat.chat || []
+      const {chat, chatIndex} = useSelector((state: RootState) =>
+        state || []
       );
 
     const cleanMarkdown = (aiResponse : string) => ({
@@ -20,7 +21,7 @@ const ChatWindow = ({chatResponseLoading}: MyComponentProps) => {
         Chat with AI
     </h3>
     {
-        messages.map((chatItem : Message, key : number) => {
+        chat.chat[chatIndex.chatId].map((chatItem : Message, key : number) => {
             return (
                 <React.Fragment key={key}>
                     <div className={chatItem.role === 'User' ? "user-text" : "ai-response"}>

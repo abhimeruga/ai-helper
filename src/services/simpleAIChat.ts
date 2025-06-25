@@ -1,4 +1,5 @@
 import constants, {preamblesType} from "../constants/main.constant";
+import { API_BASE_URL } from '../config';
 
 
 async function chatWithAssistant(userMessage: string, chatId: string): Promise<string> {
@@ -6,7 +7,7 @@ async function chatWithAssistant(userMessage: string, chatId: string): Promise<s
     console.log(chatId, role);
 
     try {
-      const response = await fetch("http://localhost:5000/api/chat", {
+      const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

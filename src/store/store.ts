@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import chatReducer from "./chatSlice";
+import chatIndexReducer from "./chatIndexSlice";
 
 export const store = configureStore({
     reducer : {
-        chat : chatReducer
+        chat : chatReducer,
+        chatIndex : chatIndexReducer
     }
 });
 
