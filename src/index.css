@@ -59,16 +59,36 @@ code {
 }
 
 .chat-container {
-    height: 90vh;
-    background-color: aliceblue;
-    margin: 20px 10px;
-    padding: 0px 40px;
-    overflow: auto;
+  color: #d2d9d6;
+  height: 78vh;
+  background-color: rgb(9, 107, 104);
+  margin: 20px 10px;
+  padding: 0px 40px;
+  overflow: auto;
+  border-radius: 9px;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: rgb(9, 107, 104); /* Match your div's background */
+  border-radius: 12px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Or a custom color */
+  border-radius: 8px;
+  border: 2px solid rgb(9, 107, 104); /* Gives padding effect, matching background */
 }
 
 .footer-container {
   display: flex;
+  position: absolute;
   justify-content: center;
+  bottom: 20px;
+  width: 100%;
 }
 
 .user-text {
@@ -76,7 +96,7 @@ code {
   width: 42%;
   margin: 10px;
   text-align: left;
-  border: 1px solid #7c8899;
+  border: 1px solid #d2d2d2;
   border-radius: 16px;
   word-wrap: break-word;
 }
@@ -85,9 +105,9 @@ code {
   padding: 20px;
   text-align: left;
   word-wrap: break-word;
-  width: 44%;
+  width: 64%;
   margin: 10px;
-  border: 1px solid #7c8899;
+  border: 1px solid #d2d2d2;
   border-radius: 16px;
   margin-left: auto;
 }

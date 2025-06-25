@@ -1,0 +1,18 @@
+.ask-something{
+    margin-top: 34%;
+}
+
+.btn-submit{
+    color : #a9ddc5 !important;
+    background-color: #096B68 !important;
+}
+
+.text-input {
+    width: 50%;
+    margin: 0px 10px !important;
+    border : #a9ddc5 !important;
+}
+
+.text-input:focus{
+    color: rgb(9, 107, 104) !important;
+}

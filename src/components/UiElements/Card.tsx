@@ -27,16 +27,13 @@ export default function OutlinedCard(props : card) {
             <Typography variant="h5" component="div">
                 {name}
             </Typography>
-            {/* <hr/> */}
-            {'________________________'}
+            <hr className='card-hr'/>
             <Typography variant="body2">
-                <br/>
                 {description}
-                <br />
             </Typography>
             </CardContent>
-            <CardActions>
-                <CustomButton onClick={handleNavigation} name="Ask Question" style={{color : '#a9ddc5', backgroundColor: '#096B68'}} size="small" />
+            <CardActions className='card-footer'>
+                <CustomButton className='btn-ask-question' onClick={handleNavigation} name="Ask Question" size="small" />
             </CardActions>
         </Card>
     );

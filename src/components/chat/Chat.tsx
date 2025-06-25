@@ -15,7 +15,6 @@ const Chat = () => {
   const [userText, setUserText] = useState('');
 //   const [messages, setMessages] = useState<message[]>([])
   const [chatResponseLoading, setChatResponseLoading] = useState<boolean>(false);
-  const {chatId} = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -32,7 +31,7 @@ const Chat = () => {
     // setMessages(newMessages);
     setUserText('');
 
-    const assistantResponse = await chatWithAssistant(userText, chatIndex?.split(':')[1] || '');
+    const assistantResponse = await chatWithAssistant(userText, chatIndex);
     dispatch(addMessage({role : 'AI', text: `🤖: ${assistantResponse}`, chatId: chatIndex}))
     // setMessages((prev) => [...prev, {role : 'AI', text: `🤖: ${assistantResponse}`}]);
     setChatResponseLoading(false);
@@ -40,13 +39,13 @@ const Chat = () => {
 
     return (
     <div className='main-container'>
-      <div className='chat-container'>
-      <CustomButton className='back-button' onClick={() => navigate('/')} name="Go Back" />
-      <ChatWindow chatResponseLoading={chatResponseLoading} />
+      <div className=''>
+        <CustomButton className='back-button' onClick={() => navigate('/')} name="Go Back" />
+        <ChatWindow chatResponseLoading={chatResponseLoading} />
       </div>
       <div className='footer-container'>
-        <CustomTextField maxRows={2} value={userText} onChange={(e) => setUserText(e.target.value)} style={{width: '50%', margin: '0px 10px', border : '#a9ddc5'}} label="AI chat"/>
-        <CustomButton style={{color : '#a9ddc5', backgroundColor: '#096B68'}} disabled={chatResponseLoading} onClick={(e) => {handleSubmit(e)}} name="submit" />
+        <CustomTextField className='text-input' maxRows={2} value={userText} onChange={(e) => setUserText(e.target.value)} label="AI chat"/>
+        <CustomButton className='btn-submit' disabled={chatResponseLoading} onClick={(e) => {handleSubmit(e)}} name="submit" />
       </div>
     </div>
     )
