@@ -16,3 +16,18 @@
 .text-input:focus{
     color: rgb(9, 107, 104) !important;
 }
+
+.btn-container{
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    display: flex;
+}
+.back-button {
+    color: rgb(169, 221, 197) !important;
+    background-color: rgb(9, 107, 104) !important;
+    margin: 0px 5px !important;
+}
+.back-button:disabled{
+    opacity: 0.6;;
+}

@@ -6,6 +6,10 @@ interface ChatMessage {
     text : string,
     chatId : string
 }
+
+interface ChatId {
+    chatId : string
+}
 interface chatState {
     chat : {
         [chatId: string]: ChatMessage[];
@@ -31,11 +35,14 @@ const chatSlice = createSlice({
         addMessage : (state, action:PayloadAction<ChatMessage>) => {
             state.chat[action.payload.chatId].push(action.payload)
         },
+        clearChat : (state, action:PayloadAction<ChatId>) =>{
+            state.chat[action.payload.chatId] = [];
+        },
         setLoading: (state, action: PayloadAction<boolean>) => {
             state.loading = action.payload;
           },
     }
 });
 
-export const {addMessage, setLoading} = chatSlice.actions;
+export const {addMessage, setLoading, clearChat} = chatSlice.actions;
 export default chatSlice.reducer;

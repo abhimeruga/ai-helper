@@ -1,32 +1,32 @@
 [
     {
-        "id" : 1,
-        "shortKey" : "CA",
-        "name" : "Code Assist",
-        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+        "id": 1,
+        "shortKey": "CA",
+        "name": "Code Assist",
+        "description": "Helps you with code review, writes logic, and assists in writing unit tests efficiently."
     },
     {
-        "id" : 2,
-        "shortKey" : "WP",
-        "name" : "Writes Poems",
-        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+        "id": 2,
+        "shortKey": "WP",
+        "name": "Poem Writer",
+        "description": "Generates creative and emotional poems with rhyme, tone, and structure tailored to your input."
     },
     {
-        "id" : 3,
-        "shortKey" : "CS",
-        "name" : "Correct grammer and sentences",
-        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+        "id": 3,
+        "shortKey": "CS",
+        "name": "Grammar Fixer",
+        "description": "Corrects grammar, punctuation, and sentence structure to improve clarity, tone, and readability effectively."
     },
     {
-        "id" : 4,
-        "shortKey" : "RAG",
-        "name" : "RAG",
-        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+        "id": 4,
+        "shortKey": "RAG",
+        "name": "RAG Helper",
+        "description": "Assists in retrieval-augmented generation tasks, improving document-based answers with precise referencing."
     },
     {
-        "id" : 5,
-        "shortKey" : "PG",
-        "name" : "Promt generator",
-        "description" : "Helps you with code review, writes logics, helps in writing Unit tests"
+        "id": 5,
+        "shortKey": "PG",
+        "name": "Prompt Generator",
+        "description": "Creates effective prompts for AI interactions, ensuring relevance, clarity, and optimal model performance."
     }
 ]
